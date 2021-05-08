@@ -12,6 +12,7 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiKeyInterceptor } from './services/api-key.interceptor';
 import { DisplayCurrencyPipe } from './services/display-currency.pipe';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DisplayCurrencyPipe } from './services/display-currency.pipe';
     MatGridListModule,
     MatCardModule,
     MatSidenavModule,
+    FlexLayoutModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: ApiKeyInterceptor, multi: true}, DisplayCurrencyPipe, CurrencyPipe],
   bootstrap: [AppComponent]
