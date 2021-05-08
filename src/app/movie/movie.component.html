@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+    <img src="{{movie.poster}}" alt="Poster for {{movie.title}}">
+    <mat-card-content>
+        <mat-grid-list cols="2" gutterSize="5px" rowHeight="12px">
+            <mat-grid-tile><b>Cinemaworld</b></mat-grid-tile>
+            <mat-grid-tile>{{movie.cinemaworld}}</mat-grid-tile>
+            <mat-grid-tile><b>Filmworld</b></mat-grid-tile>
+            <mat-grid-tile>{{movie.filmworld}}</mat-grid-tile>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>
