@@ -14,6 +14,7 @@ import { MovieService, Providers } from '../services/movie.service';
 export class MovieListComponent implements OnInit {
 
   movies: CombinedMovie[];
+  criticalErrorDetected = false;
 
   constructor(private movieService: MovieService, private displayCurrency: DisplayCurrencyPipe) { }
 
@@ -22,13 +23,17 @@ export class MovieListComponent implements OnInit {
   }
 
   load() {
-    const filmworld$ = this.movieService.getInfo(Providers.Filmworld).pipe(catchError(_ => of({ Provider: "", Movies: [] } as InfoApiResponse)));
-    const cinemaworld$ = this.movieService.getInfo(Providers.Cinemaworld).pipe(catchError(_ => of({ Provider: "", Movies: [] } as InfoApiResponse)));;
+    const filmworld$ = this.movieService.getInfo(Providers.Filmworld);
+    const cinemaworld$ = this.movieService.getInfo(Providers.Cinemaworld);
 
     forkJoin([filmworld$, cinemaworld$]).pipe(
       map(res => {
         const [filmworld, cinemaworld] = res;
         const combinedArray: CombinedMovie[] = []
+        if (filmworld.Movies.length === 0 && cinemaworld.Movies.length === 0){
+          this.criticalErrorDetected = true;
+          return [];
+        }
         if (filmworld.Movies.length > 0) {
           filmworld.Movies.forEach(movie => {
             combinedArray.push({
