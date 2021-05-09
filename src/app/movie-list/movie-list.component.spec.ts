@@ -1,3 +1,12 @@
+/*
+ Unit Test for Movie List Component
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
+
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';

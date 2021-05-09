@@ -1,3 +1,11 @@
+/*
+To add the api key on every request
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
 import { Injectable } from '@angular/core';
 import {
   HttpRequest,

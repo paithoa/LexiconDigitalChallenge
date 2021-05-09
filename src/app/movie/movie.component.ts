@@ -1,3 +1,12 @@
+/*
+Component Code for Movie Component
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
+
 import { Component, Input, OnInit } from '@angular/core';
 import { CombinedMovie } from '../models/CombinedMovie';
 

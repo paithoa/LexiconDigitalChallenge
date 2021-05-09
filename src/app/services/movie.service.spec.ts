@@ -1,3 +1,11 @@
+/*
+Unit test for Movie Service
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
 import { TestBed } from '@angular/core/testing';
 
 import { MovieService, Providers } from './movie.service';

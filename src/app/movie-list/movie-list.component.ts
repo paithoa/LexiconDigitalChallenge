@@ -1,3 +1,12 @@
+/*
+Logic Code for Movie List
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';

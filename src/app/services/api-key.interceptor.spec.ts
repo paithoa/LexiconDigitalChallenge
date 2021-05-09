@@ -1,3 +1,11 @@
+/*
+Unit test for Interceptor
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
 import { HttpClient, HttpRequest } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 

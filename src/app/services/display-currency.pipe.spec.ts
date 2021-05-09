@@ -1,3 +1,12 @@
+/*
+Unit Test for Display Currency
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
+
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { DisplayCurrencyPipe } from './display-currency.pipe';

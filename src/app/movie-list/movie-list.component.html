@@ -1,3 +1,10 @@
+<!--  
+    This template presents and handles the lists of movies.
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+-->
 <ng-container *ngIf="movies != undefined && movies.length > 0 && !criticalErrorDetected">
     <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="10px" fxLayoutAlign="flex-start">
         <ng-container *ngFor="let movie of movies">

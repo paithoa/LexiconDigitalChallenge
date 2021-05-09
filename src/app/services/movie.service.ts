@@ -1,3 +1,11 @@
+/*
+Seperate api call concerns from the Component
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';

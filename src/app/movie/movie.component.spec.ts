@@ -1,3 +1,11 @@
+/*
+ Unit Test for Movie Component
+Author(s):
+    Handy Hasan
+Date Created:
+    May 9, 2021
+
+*/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieComponent } from './movie.component';
