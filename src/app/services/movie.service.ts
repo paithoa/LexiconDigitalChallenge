@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { InfoApiResponse } from '../models/InfoApiResponse';
 
 @Injectable({
@@ -11,7 +12,8 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getInfo(provider: Providers): Observable<InfoApiResponse> {
-    return this.http.get<InfoApiResponse>(`https://challenge.lexicondigital.com.au/api/v2/${provider}/movies`);
+    return this.http.get<InfoApiResponse>(`https://challenge.lexicondigital.com.au/api/v2/${provider}/movies`)
+                    .pipe(catchError(_ => (of({ Provider: provider, Movies: [] } as InfoApiResponse))));
   }
 }
 
