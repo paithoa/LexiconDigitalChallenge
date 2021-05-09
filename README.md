@@ -6,17 +6,12 @@
 which allows the customers to see what movies are available and which movie provider streams at a lower price.
 
 
-### Technologies Used
+### Technologies and Dependencies used
 
-* Developed on the macOS Catalina Version 10.15.6 using Visual Studio Code
-* Postman to verify API endpoints
 * Angular 11
-
-### Dependencies Needed
-
 * Angular Flex Layout ( UI Design )
 * Angular Material ( UI Design )
-
+* Postman to verify API endpoint
 
 ### How to use
 
